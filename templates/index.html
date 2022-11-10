@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style type="text/css">
+
+        .main-section{
+        margin:0 auto;
+        padding: 20px;
+        margin-top: 100px;
+        background-color: #fff;
+        box-shadow: 0px 0px 20px #c1c1c1;
+        }
+        #custom_card{
+            background-color:grey;
+            color:#fff;
+            padding:10px;
+        }
+        #custom_card2{
+            background-color:#383838;
+            color:#fff;
+            padding:10px;
+        }
+    </style>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/css/mdb.min.css" rel="stylesheet">
+    <title>Classificador de Noticias</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="/">AMF - Classificador de Notícias</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          </li>  
+        </ul>
+
+      </div>
+    </nav>
+    
+    
+    <div class="jumbotron">  
+    <br>
+    <p >O classificador de notícias foi treinado para identificar se pertence às seguites classes:<br> <b>Carros, Economia, Educação, Esporte, Musica e Política </b></p>
+    
+    <br>
+        <form method="POST" action="{{ url_for('process')}}" >
+
+            <textarea  rows="5" cols="5" placeholder="Informe uma notícia" required="true" name="query" class="form-control"></textarea>
+            <dic class="container">
+                <br>
+                <button type="reset" class="btn btn-primary"><i class="fa fa-eraser"></i> Limpar</button>
+                <button type="submit" class="btn btn-info"> <i class="fa fa-database"></i>Consultar</button>
+            </div>
+        </form>
+
+    </div>
+    
+</body>
+</html>
